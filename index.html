@@ -1,0 +1,309 @@
+<!DOCTYPE html>   
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Repaso al universo de pelis de Marvel</title>
+		<style>
+			body{
+				background-image: url("./img/fondo.jpg");
+				background-color: black;
+				background-position: initial;
+				background-repeat: no-repeat;
+				background-size: 1920px;
+			}
+			p{
+				color: white;
+				text-align: justify;
+				font-family: courier new;
+				font-size: 20px;
+			}
+			h1{
+				text-decoration: none;
+				color: rgb(255, 255, 187);
+				text-shadow: 1px 1px 2px black, 3px 3px 25px rgb(255, 0, 149), 6px 6px 30px rgb(97, 5, 173);
+				background-image: radial-gradient(circle, rgba(0,0,0,1)70%, rgba(0,0,0,0));
+				text-align: center;
+				font-family: lucida console;
+				font-size: 35px;
+				padding: 10px;
+				-webkit-animation: glow 1s ease-in-out infinite alternate;
+				-moz-animation: glow 1s ease-in-out infinite alternate;
+				animation: glow 1s ease-in-out infinite alternate;
+				position: sticky;
+				top: 4px;
+				z-index:+1
+			}
+			div.title{
+				text-decoration: none;
+				color: rgb(255, 255, 187);
+				text-shadow: 1px 1px 2px black, 3px 3px 25px rgb(255, 0, 149), 6px 6px 30px rgb(97, 5, 173);
+				background-image: radial-gradient(circle, rgba(0,0,0,1)70%, rgba(0,0,0,0));
+				text-align: center;
+				font-family: lucida console;
+				font-size: 35px;
+				padding: 5px;
+				-webkit-animation: glow 1s ease-in-out infinite alternate;
+				-moz-animation: glow 1s ease-in-out infinite alternate;
+				animation: glow 1s ease-in-out infinite alternate;
+				position: sticky;
+				top: 4px;
+				z-index:+1
+			}
+			@-webkit-keyframes glow {
+				from {
+					text-shadow: 0 0 5px rgb(255, 255, 255, 0.5), 0 0 10px rgb(255, 255, 255, 0.5), 0 0 20px rgb(230, 0, 115, 0.5), 0 0 30px rgb(230, 0, 115, 0.5), 0 0 40px rgb(230, 0, 115, 0.5), 0 0 50px rgb(230, 0, 115, 0.5), 0 0 60px rgb(230, 0, 115, 0.5);
+				}
+				to {
+    				text-shadow: 0 0 5px rgb(255, 255, 255, 0.5), 0 0 10px rgb(255, 77, 166, 0.5), 0 0 20px rgb(255, 77, 166, 0.5), 0 0 30px rgb(255, 77, 166, 0.5), 0 0 40px rgb(255, 77, 166, 0.5), 0 0 50px rgb(255, 77, 166, 0.5), 0 0 60px rgb(255, 77, 166, 0.5);
+				}
+			}
+			h2{
+				text-decoration: underline;
+				color: rgb(255, 255, 187);
+				text-shadow: 1px 1px 2px black, 0 0 5px rgb(255, 0, 149), 0 0 10px rgb(97, 5, 173);
+				background-image: radial-gradient(circle, rgba(73, 73, 73,1)10%, rgba(0,0,0,0));
+				text-align: center;
+				font-family: copperplate;
+				font-size: 25px;
+				padding: 10px;
+				-webkit-animation: glow 1s ease-in-out infinite alternate;
+				-moz-animation: glow 1s ease-in-out infinite alternate;
+				animation: glow 1s ease-in-out infinite alternate;
+			}
+			a{
+				text-decoration: none;
+				font-family: Times New Roman;
+				font-size: 20px;
+			}
+			.image {
+				opacity: 1;
+				display: block;
+				width: 100%;
+				height:auto;
+				transition: .5s ease;
+				backface-visibility: hidden;
+				border: 3px solid #ddd;
+				border-radius: 4px;
+				padding: 5px;
+			}
+			.spotify{
+				width: 800px;
+				height: 280px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.gradiente{
+				background-image: radial-gradient(circle, rgba(73, 73, 73,1)10%, rgba(0,0,0,0));
+				padding: 7.5px;
+			}
+			.gif{
+				border: none;
+				border-radius: none;
+				padding: none;
+				width: auto;
+				height: 500px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.container {
+  				position: relative;
+  				width: 50%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.middle {
+				transition: .5s ease;
+				opacity: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+			}
+			.container:hover .image {
+				opacity: 0.2;
+				color: black;
+			}
+			.container:hover .middle {
+				opacity: 1;
+				color: black;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+			.text {
+				color: rgb(255, 255, 187);
+				text-shadow: 1px 1px 2px black, 0 0 5px rgb(255, 0, 149), 0 0 10px rgb(97, 5, 173);
+				font-size: 40px;
+				padding: 8px 8px;
+				text-align: center;
+			}
+			.youtube{
+				width: 1000px;
+				height:562.5px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			* {
+				box-sizing: border-box;
+			}
+
+			.column {
+ 				float: left;
+  				width: 33.33%;
+				padding: 5px;
+			}
+			.row::after {
+ 				content: "";
+  				clear: both;
+  				display: table;
+			}
+			.sans{
+				font-size: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title">REPASO AL UNIVERSO DE PELIS DE MARVEL POR JOSEJU</div>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<hr></hr>
+		<h2>• Video original de Joseju:</h2>
+		<hr></hr>
+		<iframe class="youtube" src="https://www.youtube.com/embed/r_C5NPtD0xI" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+			alt="video original de joseju"
+		</iframe>
+		<hr></hr>
+		<p>Todo empieza con el hombre de acero que es probablemente la película más importante del universo marvel, porque es la que da pie a todo, y estaréis pensando: "ya, pero el hombre de acero no es de DC, no es superman". Sí y ése es el problema tony stark quiere ser el hombre de acero pero tiene que conformarse con ser el hombre de hierro dulce, iron man, aunque luego se hace un traje de strangis que es de acero y es el hombre de acero pero no se lo puede decir a nadie porque eso es infracción de propiedad intelectual.</p>
+		<hr></hr>
+		<div class="container">
+			<img class="image" src="https://newsedgepoint.net/wp-content/uploads/2020/05/Superman-DESTROYS-Iron-Man-in-MarvelDC-Crossover.jpg" alt="imagen de iron man vs superman"/>
+				<div class="middle">
+			 	<div class="text">Iron Man vs Superman</div>
+			</div>
+		</div>
+		<hr></hr>
+		<p>Luego esta Thor que es la historia de este martillo y su amigo buenorro cachas, que luchan juntos contra las fuerzas del mal, y las tazas.</p>
+		<p>Aquí el universo marvel toma una dirección un tanto inesperada porque empiezan con spin-offs y el primero de estos es iron man-dos, en contra lo que pueda parecer en un primer momento no es iron man 2 sino iron mandos, la pre cuela que cuenta como tony stark formó su imperio empresarial haciendo mandos de metal de x box 360. Como era de esperar despidieron inmediatamente el director.</p>
+		<p>La siguiente peli es capitán américa, el primer vengador, que trata de como en la...</p>
+		<p>fuera! coño puta vista, fuera fuera de aquí. Le he enseñado a esa avispa quién manda, mi irracional me da las avispas eso es lo que manda.</p>
+		<p>Se me olvido de lo que está hablando... a, ahora los vengadores, ee conocéis a loki, ya sabéis, éste el dios de las triquiñuelas, las bromas y el engaño. Pues lleva siendo el dios de las pranks miles de años, así que os podéis apostar la mano derecha a que ha estado miles miles de años gastandoles pequeñas "bromas" a los dioses, luego tiene que tener el mejor sentido del humor del universo, y en esta película demuestra con terrorismo a gran escala!</p>
+		<p>Asi que los heroes se juntan para hacerle una visita loki, por que están un poquito molestos con esa pequeña broma de comedia. A todo esto hulk ha vuelto porque el guion lo exigía y además es el único que sabe derrotar a loki, pero nadie le cree porque sigue siendo increíble hulk y loki sabe, así que se mofa de él diciéndole al grupo: "el secreto está en la masa".</p>
+		<p>Después de esto viene hay dos man tres, en la que tony stark, que está cansado de operar solo, se hace más armaduras para sus compis, pero como son de metales venenosos como el plomo mueren todos y aprende que eso es lo que pasa cuando tocas los juguetes de dios no?</p>
+		<p>Es un final un poquito triste para la saga iron man, sobre todo considerando que este director también le despidieron.</p>
+		<p>Después viene thor, el mundo oscuro, la primera y única película de marvel dirigida por Michael May, una película quizá demasiado avanzada para su tiempo, se llama el mundo oscuro porque transcurre en un mundo de oscuridad y por tanto no hay video, sólo es audio. desgraciadamente Michael May también fue despedido nada más salir la pelicula.</p>
+		<p>Después de esto salió capitán américa, en los juegos de invierno, que en realidad es un video juego y termina con la trágica derrota de capitán américa contra mario, el famoso súper héroe italiano.</p>
+		<hr></hr>
+		<div class="container">
+			<img class="image" src=".\img\mario y iron man en los juegos olimpicos.png" alt="imagen de iron man vs super mario"/>
+				<div class="middle">
+			 	<div class="text">Mario versus capitan america (me equivoque y edité a iron man)</div>
+			</div>
+		</div>
+		<hr></hr>
+		<p>Luego esta guardianes de la galaxia que va de cómo un grupo de aventureros espaciales se embarcan en distintas aventuras y exploran distintos planetas, muy divertida, muy recomendable.</p>
+		<p>luego viene la segunda parte de los vengadores, en la que nuestros héroes, los vengadores, que por cierto llevan siendo rencorosos, porque se están llamando los vengadores, mazo de tiempo y ni siquiera sabemos de qué se vengan. Tienen que enfrentarse a ultron, que como podéis ver es literalmente un hombre de acero, y por tanto una infracción de copyright andante, así que los héroes irónicamente liderados por tony stark, que tiene que estar más incómodo que robocop en un microondas, derrotan a utron. Y por tanto el universo marvel puede seguir tranquilamente sin más batallas legales.</p>
+		<p>Después de esto salió antman, que era la segunda oportunidad que el estudio le concedió a Michael May, algo que no salió muy bien porque es otra película demasiado avanzada a su tiempo, en esta película el protagonista es antman, que cómo es el hombre hormiga apenas se le ve, y por tanto es una película de superhéroes en la que nunca ves al superhéroe. Después de esto se rumorea que michael may fue apuñalado por stan li en un callejón, pero nunca ha sido confirmado.</p>
+		<p>Luego está el siguiente gran evento en la saga marvel, que es capitán américa, guerra civil. En la que hay dos bandos, uno del norte y otro del sur, el sur dice que no le mola la idea de los derechos humanos y el norte pues como que tiene las ideas más claras y le mola pues eso de que las personas sean consideradas personas, así que al final capitán américa lo soluciona todo mediando y se fusiona con iron man. Y se convierten en capitán man, el único ser humano capaz de sustentar cierto liderazgo.</p>
+		<p>Después viene doctor strange, película en la que el famoso actor Benjamin Overwatch interpreta al doctor extraño. Después de obtener su doctorado en rarologia se da cuenta de que con esta carrera pues es muy difícil encontrar trabajo incluso en starbucks, así que decide hacerse superhéroe.</p>
+		<p>luego viene guardianes de la galaxia 2, vale, que es como la primera pero en ésta se cargan una estrella de la muerte aún más grande.</p>
+		<p>Luego ésta spider man home comming que la verdad que es una es una película bastante normal, pero despidieron al director igualmente porque no recaudó siete mil trillones de dólares en la primera semana.</p>
+		<p>Y luego está thor ragnarok que en la que thor, Cris Hemsworth y Hulk se van de colegueo al ragnarrock el famoso festival de música jazz, pero thor pierde su cartera y la estan buscando un buen rato hasta que encuentran a Jeff Goldblum que les enseña que el auténtico tesoro no son los billetes o los documentos de identificación que pudieran llevar en su persona, sino los amigos que hicieron por el camino, eso si, siguen sin poder volver a casa por qué thor llevaba el carné de conducir en la cartera y nadie se cree que hulk pueda conducir.</p>
+		<hr></hr>
+		<div class="container">
+			<img class="image" src=".\img\ragnarock.png" alt="ragnarock"/>
+				<div class="middle">
+			 	<div class="text">Ragna - rock</div>
+			</div>
+		</div>
+		<hr></hr>
+		<p>luego esta black panther *suena la musica de la pantera rosa*</p>
+		<p>Y luego los vengadores la guerra del infinito en la que los vengadores se pegan con thanos en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito.</p>
+		<p>Y luego esta deadpool, pero no es del universo marvel así que se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra del infinito y se siguen pegando en la guerra de...</p>
+		<hr></hr>
+		<h2>• Playlist con la banda sonora de las peliculas de Marvel:</h2>
+		<hr></hr>
+		<iframe class="spotify" src="https://open.spotify.com/embed/playlist/1C3rLT7O5hVDFtFmhAgFDI" frameborder="0" allowtransparency="true" allow="encrypted-media">
+		</iframe>
+		<hr></hr>
+		<h2>• Enlaces:</h2>
+		<hr></hr>
+		<ul>
+			<li>
+				<a href="https://www.youtube.com/channel/UCzDI_VuYb14FLu9f8uXOeSA" rel="external" target="_blank">
+					Canal de Joseju
+				</a>
+			</li>
+			<li>
+				<a href="https://www.marvel.com" rel="external" target="_blank">
+					Pagina web oficial de Marvel
+				</a>
+			</li>
+		</ul>
+		<hr></hr>
+		<h2>• Conclusión:</h2>
+		<hr></hr>
+		<p>Gracias por leer esta review, espero que te haya gustado la pagina y que todo el codigo estuviese bien, ya que he usado un poco de css y he tenido que aprenderlo por mi cuenta.</p>
+		<p>Para ello esta pagina me ha sido muy util, tienen de todo sobre html y muy bien explicado:</p>
+		<a href="https://www.w3schools.com" rel="external" target="_blank">pagina principal de w3schools</a>
+		<hr></hr>
+		<h1 class="gradiente">♡ FIN DE LA PAGINA WEB ♡</h1>
+		<hr></hr>
+		<div class="row">
+			<div class="column">
+				<p class="sans"> ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+					░░░░░░░░░░██████████████████░░░░░░░░░░
+					░░░░░░████░░░░░░░░░░░░░░░░░░████░░░░░░
+					░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░
+					░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░
+					░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░
+					░░██░░░░░░░░░░░░░░░░░░░░██████░░░░██░░
+					░░██░░░░░░░░░░░░░░░░░░░░██████░░░░██░░
+					░░██░░░░██████░░░░██░░░░██████░░░░██░░
+					░░░░██░░░░░░░░░░██████░░░░░░░░░░██░░░░
+					░░████░░██░░░░░░░░░░░░░░░░░░██░░████░░
+					░░██░░░░██████████████████████░░░░██░░
+					░░██░░░░░░██░░██░░██░░██░░██░░░░░░██░░
+					░░░░████░░░░██████████████░░░░████░░░░
+					░░░░░░░░████░░░░░░░░░░░░░░████░░░░░░░░
+					░░░░░░░░░░░░██████████████░░░░░░░░░░░░
+					░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
+			</div>
+			<div class="column">
+				<img class="gif" src="https://media.tenor.com/images/5185e189880510119152ade7d0859fcc/tenor.gif" alt="gif de thanos bailando"/>
+			</div>
+			<div class="column">
+				<p class="sans"> ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+					░░░░░░░░░░██████████████████░░░░░░░░░░
+					░░░░░░████░░░░░░░░░░░░░░░░░░████░░░░░░
+					░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░
+					░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░██░░░░
+					░░██░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░██░░
+					░░██░░░░██████░░░░░░░░░░░░░░░░░░░░██░░
+					░░██░░░░██████░░░░░░░░░░░░░░░░░░░░██░░
+					░░██░░░░██████░░░░██░░░░██████░░░░██░░
+					░░░░██░░░░░░░░░░██████░░░░░░░░░░██░░░░
+					░░████░░██░░░░░░░░░░░░░░░░░░██░░████░░
+					░░██░░░░██████████████████████░░░░██░░
+					░░██░░░░░░██░░██░░██░░██░░██░░░░░░██░░
+					░░░░████░░░░██████████████░░░░████░░░░
+					░░░░░░░░████░░░░░░░░░░░░░░████░░░░░░░░
+					░░░░░░░░░░░░██████████████░░░░░░░░░░░░
+					░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</p>
+			</div>
+		</div>
+	</body>
+</html>
