@@ -57,6 +57,14 @@
     				text-shadow: 0 0 5px rgb(255, 255, 255, 0.5), 0 0 10px rgb(255, 77, 166, 0.5), 0 0 20px rgb(255, 77, 166, 0.5), 0 0 30px rgb(255, 77, 166, 0.5), 0 0 40px rgb(255, 77, 166, 0.5), 0 0 50px rgb(255, 77, 166, 0.5), 0 0 60px rgb(255, 77, 166, 0.5);
 				}
 			}
+			@-webkit-keyframes glowlink {
+				from {
+					text-shadow: 0 0 5px rgba(255, 255, 255, 0.253), 0 0 10px rgba(255, 255, 255, 0.253), 0 0 20px rgba(0, 225, 255, 0.253), 0 0 30px rgba(0, 73, 230, 0.158), 0 0 40px rgba(100, 0, 230, 0.178), 0 0 50px rgba(165, 0, 230, 0.158), 0 0 60px rgba(230, 0, 192, 0.226);
+				}
+				to {
+    				text-shadow: 0 0 5px rgba(255, 255, 255, 0.185), 0 0 10px rgba(9, 78, 228, 0.233), 0 0 20px rgba(24, 228, 160, 0.185), 0 0 30px rgba(15, 208, 233, 0.253), 0 0 40px rgba(77, 255, 172, 0.185), 0 0 50px rgba(77, 234, 255, 0.185), 0 0 60px rgba(145, 77, 255, 0.185);
+				}
+			}
 			h2{
 				text-decoration: underline;
 				color: rgb(255, 255, 187);
@@ -71,9 +79,12 @@
 				animation: glow 1s ease-in-out infinite alternate;
 			}
 			a{
-				text-decoration: none;
 				font-family: Times New Roman;
 				font-size: 20px;
+				color: rgb(189, 141, 228);
+				-webkit-animation: glowlink 1s ease-in-out infinite alternate;
+				-moz-animation: glowlink 1s ease-in-out infinite alternate;
+				animation: glowlink 1s ease-in-out infinite alternate;
 			}
 			.image {
 				opacity: 1;
@@ -82,7 +93,7 @@
 				height:auto;
 				transition: .5s ease;
 				backface-visibility: hidden;
-				border: 3px solid #ddd;
+				border: 3px solid rgb(255, 255, 187);
 				border-radius: 4px;
 				padding: 5px;
 			}
@@ -147,6 +158,9 @@
 				display: block;
 				margin-left: auto;
 				margin-right: auto;
+				border: 3px solid rgb(255, 255, 187);
+				border-radius: 4px;
+				padding: 5px;
 			}
 			* {
 				box-sizing: border-box;
@@ -164,6 +178,23 @@
 			}
 			.sans{
 				font-size: 25px;
+			}
+			ul {
+  				list-style: none; 
+  				padding: 0;
+  				margin: 0;
+			}
+			li { 
+  				padding-left: 16px; 
+			}
+			li::before {
+				content: "◊"; 
+				padding-right: 8px;
+				color: rgb(255, 255, 255); 
+				text-shadow:1px 1px rgb(189, 141, 228);
+			}
+			hr{
+				border: 1px solid rgb(255, 255, 187);
 			}
 		</style>
 	</head>
@@ -183,7 +214,7 @@
 		<hr></hr>
 		<h2>• Video original de Joseju:</h2>
 		<hr></hr>
-		<iframe class="youtube" src="https://www.youtube.com/embed/r_C5NPtD0xI" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+		<iframe class="youtube" src="https://www.youtube.com/embed/r_C5NPtD0xI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 			alt="video original de joseju"
 		</iframe>
 		<hr></hr>
@@ -257,8 +288,7 @@
 		<h2>• Conclusión:</h2>
 		<hr></hr>
 		<p>Gracias por leer esta review, espero que te haya gustado la pagina y que todo el codigo estuviese bien, ya que he usado un poco de css y he tenido que aprenderlo por mi cuenta.</p>
-		<p>Para ello esta pagina me ha sido muy util, tienen de todo sobre html y muy bien explicado:</p>
-		<a href="https://www.w3schools.com" rel="external" target="_blank">pagina principal de w3schools</a>
+		<p>Para ello la página <b>"W3schools"</b> me ha sido muy util, tienen de todo sobre html y muy bien explicado: <a href="https://www.w3schools.com" rel="external" target="_blank">pagina principal de w3schools</a></p>
 		<hr></hr>
 		<h1 class="gradiente">♡ FIN DE LA PAGINA WEB ♡</h1>
 		<hr></hr>
